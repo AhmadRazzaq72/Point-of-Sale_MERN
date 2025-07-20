@@ -1,0 +1,16 @@
+#search-input1 {
+    width: 65%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  #modal-body1{
+    width: 94.5%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }

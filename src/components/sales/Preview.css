@@ -1,0 +1,21 @@
+.ph1{
+    justify-content: center;
+    opacity: 70%;
+}
+#pt1{
+    margin-left: 70px;
+    width: 87%;
+}
+.pth1{
+    padding-left: 72px;
+    width: 258px;
+}
+#print-button{
+width: 100px;
+
+}
+.btn1{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+}
