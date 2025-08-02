@@ -1,35 +1,84 @@
-.sidebar1{
-    background-color: #212529;
-    color: white;
-    height: 89.1vh;
-    width: 100px;
+/* SLIM SIDEBAR */
+.sidebar-slim {
+  position: fixed;
+  top: 56px; /* starts below header */
+  left: 0;
+  width: 70px;
+  height: calc(100vh - 56px);
+  background-color: #212529;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
 }
-.icons{
-    list-style: none;
-}
-.material-symbols-outlined{
-    font-size:30px;
 
-}
-.container1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 28px;
 
+/* Link wrapper */
+.nav-link-slim {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  position: relative;
 }
-.container1:hover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 28px;
-    background-color: rgb(45, 51, 51);
 
+/* Icon container */
+.nav-item-slim {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0;
+  transition: background-color 0.3s;
+  position: relative;
+  cursor: pointer;
 }
-.link1{
-    text-decoration:none ;
-    color: white;
 
+.nav-item-slim:hover {
+  background-color: rgb(45, 51, 51);
+}
+
+/* Icons */
+.nav-icon {
+  font-size: 26px;
+}
+
+/* Tooltip label */
+.nav-tooltip {
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #212529;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  font-size: 0.875rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item-slim:hover .nav-tooltip {
+  opacity: 1;
+}
+
+/* Optional: responsive (auto collapse) */
+@media (max-width: 768px) {
+  .sidebar-slim {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    justify-content: space-around;
+  }
+
+  .nav-tooltip {
+    display: none;
+  }
 }

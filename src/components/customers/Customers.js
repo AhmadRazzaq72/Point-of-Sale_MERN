@@ -63,7 +63,7 @@ const Customers = (props) => {
         setSearchQuery={setSearchQuery} // pass setter
       />
 
-      <table className="table table-bordered">
+      <table className="table table-bordered" style={{ textAlign: 'center', width : '97%' }}>
         <thead>
           <tr>
             <th scope="col">Customer Name</th>

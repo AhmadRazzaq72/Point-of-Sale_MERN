@@ -14,6 +14,34 @@
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.modal-dialog {
+  max-width: 700px;
+  width: 100%;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
+
 .s2{
     width: 35%;
     height: 40px;

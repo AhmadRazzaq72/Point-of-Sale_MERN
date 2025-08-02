@@ -64,7 +64,7 @@ getSalesReports(new Date(fromDate).toISOString(), new Date(toDate).toISOString()
                     Search
                 </button>
             </div>
-            <table className="table table-bordered" id='sr4' style={{ textAlign: 'center' }}>
+            <table className="table table-bordered" id='sr4' style={{ textAlign: 'center', width : '97%' }}>
                 <thead>
                     <tr>
                         <th scope="col">Invoice Number</th>
@@ -93,6 +93,8 @@ getSalesReports(new Date(fromDate).toISOString(), new Date(toDate).toISOString()
             {/* Modal */}
             {showModal && productsData && (
                 <div className="modal fade show" style={{ display: 'block'  }} tabIndex="-1" role="dialog">
+                   <div className="custom-modal">
+
                     <div className="modal-dialog" id='sr1' role="document">
                         <div className="modal-content" id='sr3'>
                             <div className="modal-header">
@@ -130,6 +132,8 @@ getSalesReports(new Date(fromDate).toISOString(), new Date(toDate).toISOString()
                             </div>
                         </div>
                     </div>
+                    </div>
+
                 </div>
             )}
 

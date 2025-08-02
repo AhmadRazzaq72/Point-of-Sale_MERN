@@ -42,7 +42,7 @@ const handleModalClose = () => {
 
                 <Search name="Add Product" title="Add Product" component={1} showAlert={props.showAlert} />
 
-                <table className="table table-bordered">
+                <table className="table table-bordered" style={{ textAlign: 'center', width : '97%' }}>
                     <thead>
                         <tr>
                             <th scope="col">Product Name</th>
@@ -58,7 +58,7 @@ const handleModalClose = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {products.map((product) => (
+                        {products?.map((product) => (
                             <tr key={product._id}>
                                 <td >{product.product_name}</td>
                                 <td>{product.brand_name}</td>
@@ -69,10 +69,10 @@ const handleModalClose = () => {
                                 <td>{product.o_price}</td>
                                 <td>{product.s_price}</td>
                                 <td>{product.qty}</td>
-                                <td >
+                                <td className='d-flex align-items-center justify-content-center'>
                                     <button
                                         type="button"
-                                        className="btn btn-info my-1 btn-sm"
+                                        className="btn btn-info  btn-sm"
                                         data-bs-toggle="modal"
                                         data-bs-target="#exampleModal1"
                                         onClick={() => setShowModal(product._id)}
@@ -93,6 +93,7 @@ const handleModalClose = () => {
                 title="Edit Product"
                 component={1}
                 productid={showModal}
+                showAlert={props.showAlert}
                 onClose={handleModalClose}
             />
         </>

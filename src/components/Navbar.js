@@ -1,18 +1,29 @@
-import React from 'react'
-import "./Navbar.css"
-import {Link} from 'react-router-dom'
+import React from 'react';
+import './Navbar.css';
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
+  const navItems = [
+    { to: '/', icon: 'dashboard', label: 'Dashboard' },
+    { to: '/sale', icon: 'point_of_sale', label: 'Sale' },
+    { to: '/product', icon: 'inventory', label: 'Products' },
+    { to: '/customers', icon: 'group', label: 'Customers' },
+    { to: '/suppliers', icon: 'local_shipping', label: 'Suppliers' },
+    { to: '/salereport', icon: 'analytics', label: 'Reports' },
+  ];
+
   return (
-   <div className="sidebar1">
-        <Link className='link1' to="/"><div className="container1"><li className='icons'><span className="material-symbols-outlined">dashboard</span></li>Dashboard</div></Link>
-        <Link className='link1' to="/sale"><div className="container1"><li className='icons'><span className="material-symbols-outlined">point_of_sale</span></li>Sale</div></Link>
-        <Link className='link1' to="/product"><div className="container1"><li className='icons'><span className="material-symbols-outlined">inventory</span></li>Products</div></Link>
-        <Link className='link1' to="/customers"><div className="container1"><li className='icons'><span className="material-symbols-outlined">group</span></li>Customer</div></Link>
-        <Link className='link1' to="/suppliers"><div className="container1"><li className='icons'><span className="material-symbols-outlined">local_shipping</span></li>Supplier</div></Link>
-        <Link className='link1' to="/salereport"><div className="container1"><li className='icons'><span className="material-symbols-outlined">analytics</span></li>Report</div></Link>
-   </div>
+    <div className="sidebar-slim">
+      {navItems.map((item, index) => (
+        <Link key={index} className="nav-link-slim" to={item.to}>
+          <div className="nav-item-slim">
+            <span className="material-symbols-outlined nav-icon">{item.icon}</span>
+            <span className="nav-tooltip">{item.label}</span>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+};
 
-  )
-}
-
-export default Navbar
+export default Navbar;

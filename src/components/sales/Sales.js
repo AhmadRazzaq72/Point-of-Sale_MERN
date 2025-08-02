@@ -198,7 +198,7 @@ const Sales = () => {
             </tr>
           </thead>
           <tbody>
-            {products.product.map((product) => (
+            {products?.product?.map((product) => (
               <tr
                 key={product._id}
                 onClick={() => handleProductSelect(product)}
@@ -214,7 +214,7 @@ const Sales = () => {
       )}
 
       {/* Product List Table */}
-      <table className="table table-bordered">
+      <table className="table table-bordered" style={{ textAlign: 'center', width : '97%' }}>
         <thead>
           <tr>
             <th>Product Name</th>
@@ -264,7 +264,7 @@ const Sales = () => {
         variant="secondary"
         onClick={() => setShowModal(true)}
       >
-        Save
+        Continue
       </Button>
 
       {/* React-Bootstrap Modal */}
@@ -303,7 +303,7 @@ const Sales = () => {
             Close
           </Button>
           <Button variant="primary" onClick={handleAddReport}>
-            Save and Continue
+            Save
           </Button>
         </Modal.Footer>
       </Modal>

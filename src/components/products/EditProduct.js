@@ -64,6 +64,7 @@ const handleClose = () => {
                 product.e_rec_date,
                 product.e_exp_date
             );
+      props.showAlert("Product updated successfully", "success");
 
             handleClose();
             setProduct({

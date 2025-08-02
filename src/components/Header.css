@@ -1,0 +1,8 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px; /* standard Bootstrap navbar height */
+  z-index: 1100; /* ensures it stays above sidebar */
+}

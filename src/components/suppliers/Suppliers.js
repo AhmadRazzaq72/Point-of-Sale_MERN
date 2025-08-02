@@ -58,7 +58,7 @@ const Suppliers = (props) => {
         placeholder="Search suppliers by name"
       />
 
-      <table className="table table-bordered mt-3">
+      <table className="table table-bordered mt-3" style={{ textAlign: 'center', width : '97%' }}>
         <thead>
           <tr>
             <th scope="col">Supplier Name</th>
@@ -82,7 +82,7 @@ const Suppliers = (props) => {
                 <td>{supplier.address}</td>
                 <td>{supplier.note}</td>
                 <td className='d-flex align-items-center justify-content-center'>
-                  <button
+                  <Button
                     type="button"
                     className="btn btn-info btn-sm mx-1"
                     onClick={() => {
@@ -91,13 +91,13 @@ const Suppliers = (props) => {
                     }}
                   >
                     Edit
-                  </button>
-                  <button
+                  </Button>
+                  <Button
                     className="btn btn-danger btn-sm"
                     onClick={() => deleteSupplier(supplier._id)}
                   >
                     Delete
-                  </button>
+                  </Button>
                 </td>
               </tr>
             ))}
