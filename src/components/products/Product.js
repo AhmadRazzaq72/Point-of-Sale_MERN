@@ -24,7 +24,6 @@ const handleModalClose = () => {
             day: 'numeric'
         });
     };
-
     return (
         <>
             <div className='container2'>
@@ -72,7 +71,7 @@ const handleModalClose = () => {
                                 <td className='d-flex align-items-center justify-content-center'>
                                     <button
                                         type="button"
-                                        className="btn btn-info  btn-sm"
+                                        className="btn btn-info mx-1 btn-sm"
                                         data-bs-toggle="modal"
                                         data-bs-target="#exampleModal1"
                                         onClick={() => setShowModal(product._id)}

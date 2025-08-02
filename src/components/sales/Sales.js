@@ -248,7 +248,7 @@ const Sales = () => {
             ))
           ) : (
             <tr>
-              <td colSpan="7">No products found</td>
+              <td colSpan="7">No product Selected</td>
             </tr>
           )}
           <tr>
@@ -268,7 +268,7 @@ const Sales = () => {
       </Button>
 
       {/* React-Bootstrap Modal */}
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal show={showModal} onHide={() => setShowModal(false)} style={{ marginTop: '40px' }}>
         <Modal.Header closeButton>
           <Modal.Title>Payment</Modal.Title>
         </Modal.Header>

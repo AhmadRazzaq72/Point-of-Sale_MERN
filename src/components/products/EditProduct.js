@@ -90,7 +90,7 @@ const handleClose = () => {
 
     return (
         <>
-            <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+            <Modal style={{ marginTop: '40px' }} show={show} onHide={handleClose} backdrop="static" keyboard={false}>
                 <Modal.Header closeButton>
                     <Modal.Title>{props.title || "Edit Product"}</Modal.Title>
                 </Modal.Header>

@@ -38,14 +38,15 @@ const getProductByName = async (productName) => {
 }
 
     //Add Product
-    const addProduct = async (product_name, full_name, description, supplier_name, o_price, s_price, qty, rec_date, exp_date) => {
+    const addProduct = async (product_name, brand_name, description, supplier_name, o_price, s_price, qty, rec_date, exp_date) => {
         //API Call
+
         const response = await fetch(`${host}/api/products/addproduct/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ product_name, full_name, description, supplier_name, o_price, s_price, qty, rec_date, exp_date }),
+            body: JSON.stringify({ product_name, brand_name, description, supplier_name, o_price, s_price, qty, rec_date, exp_date }),
         });
         const product = await response.json();
         setProducts(products.concat(product))

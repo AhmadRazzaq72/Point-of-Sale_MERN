@@ -9,6 +9,7 @@ router.get('/fetchallproducts', async (req, res) => {
     try {
         const products = await Product.find()
         res.json(products)
+
     } catch (error) {
         console.error(error.message);
         res.status(500).send("Internal Server Error");
@@ -20,6 +21,7 @@ router.post('/addproduct', async (req, res) => {
     try {
         const { product_name, brand_name, description, supplier_name, o_price, s_price, qty, rec_date, exp_date } = req.body;
         //If error return (Bad request and errors)
+
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });

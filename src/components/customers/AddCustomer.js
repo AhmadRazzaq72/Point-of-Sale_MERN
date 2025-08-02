@@ -56,7 +56,7 @@ const AddCustomer = (props) => {
         { label: "Product Name", key: "product_name", type: "text" },
         { label: "Address", key: "address", type: "text" },
         { label: "Contact Number", key: "c_number", type: "text" },
-        { label: "Total", key: "total", type: "text" },
+        { label: "Total", key: "total", type: "number" },
         { label: "Due Date", key: "due_date", type: "date" },
       ].map(field => (
         <Form.Group className="mb-3" key={field.key}>

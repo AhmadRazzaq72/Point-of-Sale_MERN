@@ -1,5 +1,6 @@
 .ph1{
     justify-content: center;
+    display: flex;
     opacity: 70%;
 }
 #pt1{

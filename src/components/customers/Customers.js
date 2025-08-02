@@ -111,7 +111,7 @@ const Customers = (props) => {
       </table>
 
       {/* Edit Customer Modal */}
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal show={showModal} onHide={() => setShowModal(false)} style={{ marginTop: '40px' }}>
         <Modal.Header closeButton>
           <Modal.Title>Edit Customer</Modal.Title>
         </Modal.Header>

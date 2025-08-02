@@ -105,7 +105,7 @@ const Suppliers = (props) => {
       </table>
 
       {/* Edit Supplier Modal */}
-      <Modal show={showEditModal} onHide={() => setShowEditModal(false)}>
+      <Modal show={showEditModal} onHide={() => setShowEditModal(false)}style={{ marginTop: '40px' }}>
         <Modal.Header closeButton>
           <Modal.Title>Edit Supplier</Modal.Title>
         </Modal.Header>
