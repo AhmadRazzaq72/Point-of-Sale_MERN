@@ -29,21 +29,6 @@ Features
 - Dark mode support (optional)
 - Authentication (Login/Logout) *(if implemented)*
 
-Project Structure
------------------
-root
-├── client               
-│   ├── public
-│   └── src
-│       ├── components   
-│       ├── pages
-│       └── App.js
-│
-├── backend         # Node.js + Express backend
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   └── index.js
 
 Installation
 ------------
